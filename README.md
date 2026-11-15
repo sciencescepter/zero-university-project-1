@@ -37,7 +37,7 @@ The model's free-text reply breaks the enforcement policy in several ways: it ha
 - **policy_reason**: one of the seven approved wordings, exactly as written, and only with the actions that reason permits
 - **evidence**: timestamped moments (start and end in seconds, plus a description); `age-restrict` and `remove` must cite at least one
 
-`validate_decision(data, clip_duration_seconds)` takes the clip's runtime from the dataset, never from the model. It rejects moments that run backwards, have zero length, or run past the end of the clip.
+`validate_decision(data, clip_duration_seconds)` takes the clip's runtime from the dataset, never from the model. It rejects moments that run backwards, have zero length, or run past the end of the clip. Every rejection is a pydantic `ValidationError` raised by the schema itself.
 
 ### Tests
 
@@ -45,4 +45,6 @@ The model's free-text reply breaks the enforcement policy in several ways: it ha
 .venv/bin/python -m pytest -v
 ```
 
-Four tests, using Ana's real reply: [outputs/pytest_output.txt](outputs/pytest_output.txt) (4 passed).
+Five tests (7 results, because the refused-label test runs once each for `flag`, `restricted` and `review`), using Ana's real reply: [outputs/pytest_output.txt](outputs/pytest_output.txt) (7 passed).
+
+They cover four kinds: a refused label, evidence that runs backwards, evidence past the end of the clip, and a valid decision that survives a JSON round trip. Each rejection test is pinned to `ValidationError` and checks which field failed, so it cannot pass because of an unrelated error.

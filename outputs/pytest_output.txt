@@ -5,11 +5,14 @@ rootdir: ~/Programming/zero-university-project-1
 configfile: pyproject.toml
 testpaths: tests
 plugins: anyio-4.16.0
-collecting ... collected 4 items
+collecting ... collected 7 items
 
-tests/test_decision_schema.py::test_ana_raw_reply_is_rejected PASSED     [ 25%]
-tests/test_decision_schema.py::test_ana_reply_in_schema_form_is_accepted PASSED [ 50%]
-tests/test_decision_schema.py::test_moment_that_runs_backwards_is_rejected PASSED [ 75%]
-tests/test_decision_schema.py::test_moment_past_clip_end_is_rejected PASSED [100%]
+tests/test_decision_schema.py::test_ana_raw_reply_is_rejected PASSED     [ 14%]
+tests/test_decision_schema.py::test_refused_action_is_rejected[flag] PASSED [ 28%]
+tests/test_decision_schema.py::test_refused_action_is_rejected[restricted] PASSED [ 42%]
+tests/test_decision_schema.py::test_refused_action_is_rejected[review] PASSED [ 57%]
+tests/test_decision_schema.py::test_moment_that_runs_backwards_is_rejected PASSED [ 71%]
+tests/test_decision_schema.py::test_moment_past_clip_end_is_rejected PASSED [ 85%]
+tests/test_decision_schema.py::test_valid_decision_survives_json_round_trip PASSED [100%]
 
-============================== 4 passed in 0.22s ===============================
+============================== 7 passed in 0.36s ===============================

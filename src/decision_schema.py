@@ -5,13 +5,23 @@ timestamped evidence moments. The rules mirror
 "Violent Content Enforcement Actions and Policy Reasons.md".
 
 The clip's runtime is never taken from the decision. It is passed in by us,
-from the dataset's duration_seconds (the upload record).
+from the dataset's duration_seconds (the upload record), through
+validate_decision / validate_decision_json.
+
+Every rejection is raised by the schema itself, as a pydantic ValidationError.
 """
 
 import re
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    ValidationError,
+    ValidationInfo,
+    model_validator,
+)
 
 Action = Literal["keep", "age-restrict", "remove"]
 
@@ -26,6 +36,8 @@ APPROVED_REASONS: dict[str, tuple[str, set[str]]] = {
     "Violence posted to glorify or celebrate harm": ("VC-05", {"remove"}),
     "Incitement or credible threat of violence": ("VC-06", {"remove"}),
 }
+
+_DURATION_KEY = "clip_duration_seconds"
 
 
 class EvidenceMoment(BaseModel):
@@ -42,6 +54,19 @@ class EvidenceMoment(BaseModel):
         if self.start >= self.end:
             raise ValueError(
                 f"moment must start before it ends (start={self.start}, end={self.end})"
+            )
+        return self
+
+    @model_validator(mode="after")
+    def within_clip(self, info: ValidationInfo):
+        duration = (info.context or {}).get(_DURATION_KEY)
+        if duration is None:
+            raise ValueError(
+                "clip runtime was not supplied; validate through validate_decision"
+            )
+        if self.end > duration:
+            raise ValueError(
+                f"moment {self.start}-{self.end}s runs past the clip's end ({duration}s)"
             )
         return self
 
@@ -72,20 +97,22 @@ class Decision(BaseModel):
         return self
 
 
+def _context(clip_duration_seconds: float) -> dict:
+    return {_DURATION_KEY: float(clip_duration_seconds)}
+
+
 def validate_decision(data: dict, clip_duration_seconds: float) -> Decision:
-    """Validate a decision against the schema and the clip's real runtime.
+    """Validate a decision (as a dict) against the schema and the clip's real runtime.
 
     clip_duration_seconds must come from the upload record (the dataset),
-    never from the model's reply.
+    never from the model's reply. Raises pydantic.ValidationError on rejection.
     """
-    decision = Decision.model_validate(data)
-    for moment in decision.evidence:
-        if moment.end > clip_duration_seconds:
-            raise ValueError(
-                f"moment {moment.start}-{moment.end}s runs past the clip's end "
-                f"({clip_duration_seconds}s)"
-            )
-    return decision
+    return Decision.model_validate(data, context=_context(clip_duration_seconds))
+
+
+def validate_decision_json(json_text: str, clip_duration_seconds: float) -> Decision:
+    """Same as validate_decision, for a decision stored as a JSON string."""
+    return Decision.model_validate_json(json_text, context=_context(clip_duration_seconds))
 
 
 def _mmss_to_seconds(stamp: str) -> float:
@@ -126,4 +153,5 @@ __all__ = [
     "ValidationError",
     "parse_raw_reply",
     "validate_decision",
+    "validate_decision_json",
 ]
