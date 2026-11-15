@@ -26,3 +26,23 @@ Raw model reply: [outputs/ana_protest_raw_reply.txt](outputs/ana_protest_raw_rep
 Label: No, the model did not remove the clip; it labelled it age-restrict, which matches the ground-truth label.
 
 Timestamps: Yes, 00:30 and 01:50 are both inside the clip's 198-second duration, and both overlap the ground-truth violent segment (0:20-2:20).
+
+## Decision schema
+
+The model's free-text reply breaks the enforcement policy in several ways: it has no policy reason, its evidence moments are single points with no end, and nothing stops a made-up label. Full list: [outputs/enforcement_gaps.md](outputs/enforcement_gaps.md).
+
+[src/decision_schema.py](src/decision_schema.py) defines a decision with:
+
+- **action**: only `keep`, `age-restrict` or `remove`
+- **policy_reason**: one of the seven approved wordings, exactly as written, and only with the actions that reason permits
+- **evidence**: timestamped moments (start and end in seconds, plus a description); `age-restrict` and `remove` must cite at least one
+
+`validate_decision(data, clip_duration_seconds)` takes the clip's runtime from the dataset, never from the model. It rejects moments that run backwards, have zero length, or run past the end of the clip.
+
+### Tests
+
+```bash
+.venv/bin/python -m pytest -v
+```
+
+Four tests, using Ana's real reply: [outputs/pytest_output.txt](outputs/pytest_output.txt) (4 passed).

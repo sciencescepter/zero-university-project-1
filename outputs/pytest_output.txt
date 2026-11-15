@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- ~/Programming/zero-university-project-1/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: ~/Programming/zero-university-project-1
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collecting ... collected 4 items
+
+tests/test_decision_schema.py::test_ana_raw_reply_is_rejected PASSED     [ 25%]
+tests/test_decision_schema.py::test_ana_reply_in_schema_form_is_accepted PASSED [ 50%]
+tests/test_decision_schema.py::test_moment_that_runs_backwards_is_rejected PASSED [ 75%]
+tests/test_decision_schema.py::test_moment_past_clip_end_is_rejected PASSED [100%]
+
+============================== 4 passed in 0.22s ===============================
