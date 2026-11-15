@@ -19,6 +19,8 @@ python main.py
 
 ## Verdict
 
+Clip identity (assumed): yt_c0143, "Clashes outside parliament as fuel price protest turns violent", is a best match for Ana's protest clip, not a confirmed one. It is the only title in the dataset containing "protest", but nothing in the data names Ana.
+
 Raw model reply: [outputs/ana_protest_raw_reply.txt](outputs/ana_protest_raw_reply.txt)
 
 Label: No, the model did not remove the clip; it labelled it age-restrict, which matches the ground-truth label.
