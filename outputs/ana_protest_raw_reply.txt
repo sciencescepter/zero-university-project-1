@@ -1,0 +1,5 @@
+Label: age-restrict
+
+Evidence timestamps:
+- [00:30] A bottle arcs through the air towards officers
+- [01:50] A paramedic tends to an officer with a bleeding forehead
