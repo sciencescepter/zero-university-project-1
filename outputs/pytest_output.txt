@@ -4,15 +4,24 @@ cachedir: .pytest_cache
 rootdir: ~/Programming/zero-university-project-1
 configfile: pyproject.toml
 testpaths: tests
-plugins: anyio-4.16.0
-collecting ... collected 7 items
+plugins: langsmith-0.14.17, anyio-4.16.0
+collecting ... collected 16 items
 
-tests/test_decision_schema.py::test_ana_raw_reply_is_rejected PASSED     [ 14%]
-tests/test_decision_schema.py::test_refused_action_is_rejected[flag] PASSED [ 28%]
-tests/test_decision_schema.py::test_refused_action_is_rejected[restricted] PASSED [ 42%]
-tests/test_decision_schema.py::test_refused_action_is_rejected[review] PASSED [ 57%]
-tests/test_decision_schema.py::test_moment_that_runs_backwards_is_rejected PASSED [ 71%]
-tests/test_decision_schema.py::test_moment_past_clip_end_is_rejected PASSED [ 85%]
-tests/test_decision_schema.py::test_valid_decision_survives_json_round_trip PASSED [100%]
+tests/test_decision_schema.py::test_ana_raw_reply_is_rejected PASSED     [  6%]
+tests/test_decision_schema.py::test_refused_action_is_rejected[flag] PASSED [ 12%]
+tests/test_decision_schema.py::test_refused_action_is_rejected[restricted] PASSED [ 18%]
+tests/test_decision_schema.py::test_refused_action_is_rejected[review] PASSED [ 25%]
+tests/test_decision_schema.py::test_moment_that_runs_backwards_is_rejected PASSED [ 31%]
+tests/test_decision_schema.py::test_moment_past_clip_end_is_rejected PASSED [ 37%]
+tests/test_decision_schema.py::test_valid_decision_survives_json_round_trip PASSED [ 43%]
+tests/test_retry.py::test_valid_first_reply_is_not_retried PASSED        [ 50%]
+tests/test_retry.py::test_broken_reply_is_retried_once_with_the_error PASSED [ 56%]
+tests/test_retry.py::test_schema_error_is_sent_back_on_the_retry PASSED  [ 62%]
+tests/test_retry.py::test_second_broken_reply_raises_and_never_defaults PASSED [ 68%]
+tests/test_triage_batch.py::test_prompt_uses_only_title_transcript_and_captions PASSED [ 75%]
+tests/test_triage_batch.py::test_valid_reply_gives_one_decision_per_clip_id PASSED [ 81%]
+tests/test_triage_batch.py::test_each_decision_is_checked_against_its_own_clips_duration PASSED [ 87%]
+tests/test_triage_batch.py::test_broken_replies_are_reported_not_defaulted PASSED [ 93%]
+tests/test_triage_batch.py::test_batch_size_is_limited_before_any_request PASSED [100%]
 
-============================== 7 passed in 0.36s ===============================
+============================== 16 passed in 0.58s ==============================
