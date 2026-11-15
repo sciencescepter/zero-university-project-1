@@ -1,0 +1,8 @@
+Label: age-restrict
+
+Evidence timestamps:
+- [00:30] A bottle arcs through the air towards officers
+- [01:50] A paramedic tends to an officer with a bleeding forehead
+
+Verdict: Agree with age-restrict. Real protest violence with an injured officer (00:30 bottle thrown, 01:50 bleeding forehead) is newsworthy, so not remove, but too graphic for all audiences.
+Check: matches the dataset's ground truth (label age-restrict, violent segment 0:20-2:20), which the model never saw; both evidence timestamps fall inside that window.

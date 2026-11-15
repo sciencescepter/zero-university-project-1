@@ -12,6 +12,8 @@ import yaml
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from load_clip import load_dataset, select_clip
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 # Cap the reply length. Without it, OpenRouter reserves credit for the model's
@@ -46,5 +48,34 @@ def call_model(message: str) -> str:
     return response.choices[0].message.content
 
 
+def build_prompt(clip) -> str:
+    """Build the moderation prompt from only columns G, H and I.
+
+    The ground-truth columns (J, K, L) are deliberately never read here, so the
+    model can't see the answers. Title, channel and category are left out too.
+    """
+    duration = clip["duration_seconds"]               # column G
+    transcript = clip["transcript_timestamped"]       # column H
+    frame_captions = clip["frame_captions_timestamped"]  # column I
+
+    return f"""You are reviewing a YouTube video clip for a content moderation team.
+
+Choose exactly one label for the clip:
+- keep: fine for all audiences
+- age-restrict: allowed, but only for adult viewers
+- remove: violates policy and should be taken down
+
+Then list the timestamps of the specific moments you used as evidence for your label.
+
+Clip duration: {duration} seconds
+
+Transcript (timestamped):
+{transcript}
+
+Frame captions (timestamped):
+{frame_captions}"""
+
+
 if __name__ == "__main__":
-    print(call_model("Reply with the word ready."))
+    clip = select_clip(load_dataset())
+    print(call_model(build_prompt(clip)))
