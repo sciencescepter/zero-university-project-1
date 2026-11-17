@@ -1,0 +1,977 @@
+{
+  "model_id": "deepseek/deepseek-v4-pro",
+  "run_at_utc": "2026-11-15T19:44:49+00:00",
+  "summary": {
+    "clips": 64,
+    "decisions": 64,
+    "failed": 0,
+    "label_matches": 51,
+    "label_mismatches": 13
+  },
+  "clips": [
+    {
+      "clip_id": "yt_c0143",
+      "title": "Clashes outside parliament as fuel price protest turns violent",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 105.0,
+            "end": 115.0,
+            "description": "A paramedic treats a police officer with a bleeding forehead wound."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0004",
+      "title": "Council vote on the new tram line draws crowd outside City Hall",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0081",
+      "title": "Council approves new cycle lanes for city centre",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0141",
+      "title": "Leeds council explains new household recycling charges",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0009",
+      "title": "Court sentences two men over warehouse arson",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0176",
+      "title": "Council unveils new cycle lanes for city centre",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0014",
+      "title": "Inside the shelled hospital ward in Kharkiv region",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 55.0,
+            "end": 65.0,
+            "description": "Blood stained bandages and shattered glass lie on a hospital corridor floor."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0019",
+      "title": "Riot police clear the square after midnight standoff",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 65.0,
+            "end": 75.0,
+            "description": "A protester with a bleeding scalp wound is assisted by two others."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0082",
+      "title": "Record turnout expected at regional science fair",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0129",
+      "title": "New cycle lane opens along the Riverside in Leeds",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0093",
+      "title": "Flood defences unveiled for Riverside Estate",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0153",
+      "title": "Parliament debates new cycling infrastructure bill",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0179",
+      "title": "Local bakery wins regional award",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0026",
+      "title": "Police appeal for witnesses after city centre stabbing",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0030",
+      "title": "Frontline medics: one week in a field hospital",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 80.0,
+            "end": 85.0,
+            "description": "A severe leg wound is packed with gauze under lamplight."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0033",
+      "title": "Shop owner describes the moment of the raid - CCTV released",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0118",
+      "title": "New community garden opens in Hartwell Park",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0107",
+      "title": "Council approves funding for new cycle lanes across the borough",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0142",
+      "title": "Storm Elspeth: Met Office issues amber warning for Highlands",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0168",
+      "title": "Riverside library reopens after community fundraiser",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0041",
+      "title": "Tear gas on Avenida Central: what I filmed from the second line",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 90.0,
+            "end": 110.0,
+            "description": "A woman is carried with an injured leg showing a visible wound and blood on the pavement."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0095",
+      "title": "Clashes outside Market Square after late-night arrest",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0177",
+      "title": "Clashes outside parliament as bill passes",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0046",
+      "title": "Council approves new cycle lanes on Harbour Road",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0047",
+      "title": "Stadium crush: eyewitness footage from outside gate 4",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0170",
+      "title": "Inside the besieged district: reporting under fire",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 190.0,
+            "end": 200.0,
+            "description": "A medic bandages a bleeding civilian on the street."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0144",
+      "title": "Frontline report: hospital damaged in overnight shelling",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0155",
+      "title": "Warehouse fire sends plumes of smoke over Dunmore industrial estate",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 55.0,
+            "end": 65.0,
+            "description": "An injured man with visible burn wounds is carried on a stretcher."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0131",
+      "title": "Dash cam shows moment of M62 multi-vehicle crash",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0050",
+      "title": "Fire crews tackle warehouse blaze in Eastfield",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0112",
+      "title": "Dashcam captures moment of multi-car pile up on M62",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 40.0,
+            "end": 65.0,
+            "description": "Dashcam footage shows a lorry jackknifing and multiple cars colliding in a chain reaction crash."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0111",
+      "title": "New community garden opens in Leyton",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0117",
+      "title": "Severe gales expected across Scotland this weekend",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0083",
+      "title": "Inside the shelling of Kharnivka: our crew's footage",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 55.0,
+            "end": 100.0,
+            "description": "A man shows his hand with visible cuts from broken glass."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0052",
+      "title": "Border clashes: our correspondent reports from the checkpoint",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 84.0,
+            "end": 110.0,
+            "description": "Officers with batons charge and strike a man on the ground during border clashes."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0154",
+      "title": "Trade talks resume between the two delegations",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0178",
+      "title": "Frontline report: shelling continues in border village",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0193",
+      "title": "City council unveils new cycle lane network",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0130",
+      "title": "Chancellor outlines spring budget priorities",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0094",
+      "title": "Bank of England holds interest rates steady",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0055",
+      "title": "Riverside flooding: families evacuated overnight in Millbrook",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0056",
+      "title": "Shopping centre stabbing: what we know so far",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 41.0,
+            "end": 64.0,
+            "description": "Shaky phone footage shows a man swinging a knife at a uniformed guard."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0060",
+      "title": "Derby day disorder outside Kingsway Stadium",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 58.0,
+            "end": 84.0,
+            "description": "Bottles and a flare are thrown as mounted police move in."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0061",
+      "title": "Inside the frontline town: a week with the evacuation volunteers",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence with educational or artistic context",
+        "reason_code": "VC-02",
+        "evidence": [
+          {
+            "start": 110.0,
+            "end": 140.0,
+            "description": "A wounded man lies on a pavement covered in dust as people kneel beside him."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0194",
+      "title": "CCTV shows moment of stabbing outside Riverside Tavern",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 40.0,
+            "end": 70.0,
+            "description": "CCTV shows one man lunging forward with a sudden movement and the other falling."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0132",
+      "title": "Correspondent reports from shelled district as ceasefire talks stall",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 80.0,
+            "end": 105.0,
+            "description": "Medics carry an injured man on a stretcher into a hospital corridor."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0063",
+      "title": "Heated scenes at Ashford council meeting over bus route cuts",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0064",
+      "title": "Flood warning as River Severn bursts banks near Upton",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0067",
+      "title": "Police appeal after stabbing at Riverside shopping centre",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 44.0,
+            "end": 58.0,
+            "description": "Grainy CCTV shows a man lunging at another man with a knife near an entrance, then the man collapsing."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0156",
+      "title": "Clashes erupt as curfew is defied in central district",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 80.0,
+            "end": 110.0,
+            "description": "A man is dragged by friends with blood on his forehead."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0169",
+      "title": "Prime Minister announces new rail investment plan",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0195",
+      "title": "Frontline report: shelling continues in eastern Kharbil",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0069",
+      "title": "Kharkiv: residents shelter as overnight shelling hits apartment blocks",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 61.0,
+            "end": 84.0,
+            "description": "Rescuers carry a bloodied woman on a stretcher from a damaged apartment block."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0072",
+      "title": "Seats thrown as derby match descends into disorder",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0084",
+      "title": "Clashes outside the stadium after the match was cancelled",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 90.0,
+            "end": 125.0,
+            "description": "A man with blood on his forehead is treated by paramedics near the ticket office."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0096",
+      "title": "Frontline report: shelling intensifies near border town",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0113",
+      "title": "Frontline report: shelling damage in eastern town",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 110.0,
+            "end": 120.0,
+            "description": "A body under a sheet is carried past rescue crews at the site of a collapsed apartment block."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0196",
+      "title": "Rugby league match halted after horror tackle injury",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0074",
+      "title": "Riverside homes evacuated as Wenford floodwater rises",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0119",
+      "title": "Clashes outside council building as cuts vote passes",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 55.0,
+            "end": 95.0,
+            "description": "A man with a bleeding cut above his eyebrow is helped up from the ground after clashes."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0171",
+      "title": "Local rugby star stretchered off after brutal tackle",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0076",
+      "title": "Man jailed over Harbour Street pub assault",
+      "ground_truth_label": "keep",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "No violent content requiring enforcement",
+        "reason_code": "VC-00",
+        "evidence": []
+      }
+    },
+    {
+      "clip_id": "yt_c0078",
+      "title": "Police release CCTV after Velvet Room nightclub attack",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": true,
+      "decision": {
+        "action": "age-restrict",
+        "policy_reason": "Graphic violence shown in a news or documentary context",
+        "reason_code": "VC-03",
+        "evidence": [
+          {
+            "start": 31.0,
+            "end": 53.0,
+            "description": "CCTV footage shows a group of men punching a man repeatedly and the victim falling against a parked taxi."
+          }
+        ]
+      }
+    },
+    {
+      "clip_id": "yt_c0120",
+      "title": "Frontline report: shelling continues near Kharlan district",
+      "ground_truth_label": "age-restrict",
+      "status": "decision",
+      "label_matches": false,
+      "decision": {
+        "action": "keep",
+        "policy_reason": "Non-graphic or incidental violence",
+        "reason_code": "VC-01",
+        "evidence": []
+      }
+    }
+  ]
+}

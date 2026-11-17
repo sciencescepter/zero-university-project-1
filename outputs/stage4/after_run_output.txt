@@ -1,0 +1,79 @@
+Model: deepseek/deepseek-v4-pro
+News clips: 64 in 7 batches of up to 10
+Ana's protest clip included: yt_c0143
+
+--- Batch 1 of 7 (10 clips)
+yt_c0143 | age-restrict | truth age-restrict | MATCH    | VC-03 | 30-35s, 110-115s
+yt_c0004 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0081 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0141 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0009 | keep         | truth keep         | MATCH    | VC-01 | no evidence
+yt_c0176 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0014 | age-restrict | truth age-restrict | MATCH    | VC-03 | 60-65s, 105-110s
+yt_c0019 | age-restrict | truth age-restrict | MATCH    | VC-03 | 70-75s, 85-90s
+yt_c0082 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0129 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+--- Batch 2 of 7 (10 clips)
+yt_c0093 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0153 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0179 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0026 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0030 | age-restrict | truth age-restrict | MATCH    | VC-03 | 80-85s
+yt_c0033 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0118 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0107 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0142 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0168 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+--- Batch 3 of 7 (10 clips)
+yt_c0041 | age-restrict | truth age-restrict | MATCH    | VC-03 | 110-115s
+yt_c0095 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0177 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0046 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0047 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0170 | age-restrict | truth age-restrict | MATCH    | VC-03 | 190-195s
+yt_c0144 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0155 | age-restrict | truth age-restrict | MATCH    | VC-03 | 55-60s
+yt_c0131 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0050 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+--- Batch 4 of 7 (10 clips)
+yt_c0112 | age-restrict | truth age-restrict | MATCH    | VC-03 | 45-58s
+yt_c0111 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0117 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0083 | age-restrict | truth age-restrict | MATCH    | VC-03 | 60-65s
+yt_c0052 | age-restrict | truth age-restrict | MATCH    | VC-03 | 95-100s
+yt_c0154 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0178 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0193 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0130 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0094 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+--- Batch 5 of 7 (10 clips)
+yt_c0055 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0056 | age-restrict | truth age-restrict | MATCH    | VC-03 | 41-64s
+yt_c0060 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0061 | age-restrict | truth age-restrict | MATCH    | VC-02 | 110-140s
+yt_c0194 | age-restrict | truth age-restrict | MATCH    | VC-03 | 45-60s
+yt_c0132 | age-restrict | truth age-restrict | MATCH    | VC-03 | 80-105s
+yt_c0063 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0064 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0067 | age-restrict | truth age-restrict | MATCH    | VC-03 | 45-55s
+yt_c0156 | age-restrict | truth age-restrict | MATCH    | VC-03 | 80-85s
+--- Batch 6 of 7 (10 clips)
+yt_c0169 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0195 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0069 | age-restrict | truth age-restrict | MATCH    | VC-03 | 61-84s
+yt_c0072 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0084 | age-restrict | truth age-restrict | MATCH    | VC-03 | 90-125s
+yt_c0096 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0113 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0196 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0074 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0119 | age-restrict | truth age-restrict | MATCH    | VC-03 | 55-95s
+--- Batch 7 of 7 (4 clips)
+yt_c0171 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+yt_c0076 | keep         | truth keep         | MATCH    | VC-00 | no evidence
+yt_c0078 | age-restrict | truth age-restrict | MATCH    | VC-03 | 35-53s, 90-102s
+yt_c0120 | keep         | truth age-restrict | MISMATCH | VC-01 | no evidence
+
+Clips: 64 | decisions: 64 | failed: 0
+Label matches ground truth: 49 of 64 clips (77%); failed clips count as not matched
+Decisions saved to outputs/news_decisions.json

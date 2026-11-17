@@ -87,3 +87,25 @@ The top seven rows are the seven batches of the news run. The bottom two are ear
 ```bash
 .venv/bin/python src/run_news_clips.py
 ```
+
+## Stricter-than-truth review (stage 4)
+
+`src/review_stricter.py` joins each run's news decisions to the labelled test set with pandas and pulls out every call stricter than the true label (keep < age-restrict < remove). Cost per clip comes from the OpenRouter cost on each run's traced batches in LangSmith.
+
+| | Before | After |
+|---|---|---|
+| **News calls stricter than truth** | **0** | **0** |
+| Looser than truth | 13 | 15 |
+| Labels matching truth | 51 of 64 | 49 of 64 |
+| Ana's clip (truth age-restrict) | age-restrict (VC-03) | age-restrict (VC-03) |
+| Cost per clip | $0.000457 | $0.000736 |
+
+**Summary.** The before run had no news calls stricter than the truth, so the review table has no traces to open and no cause to fix. Following the brief, the prompt, model routing, validation and retry were left unchanged, and the news clips (Ana's included) were run again as they are. The after run also has 0 stricter calls, and Ana's clip stays age-restrict. The pipeline's mistakes all go the other way: it says `keep` where the truth is `age-restrict`. Two more clips (yt_c0060, yt_c0113) slipped to `keep` in the after run, even though nothing in the code or the temperature-0 settings changed, so a single run is not a stable measure. Cost per clip rose without any code change, which points to OpenRouter's pricing or routing between runs, not the pipeline.
+
+- Review table and both runs' numbers: [outputs/stage4/stricter_review.md](outputs/stage4/stricter_review.md)
+- Before: [terminal output](outputs/stage4/before_run_output.txt), [decisions](outputs/stage4/before_news_decisions.json)
+- After: [terminal output](outputs/stage4/after_run_output.txt), [decisions](outputs/stage4/after_news_decisions.json)
+
+```bash
+.venv/bin/python src/review_stricter.py
+```
